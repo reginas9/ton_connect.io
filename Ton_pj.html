@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@tonconnect/ui@0.0.9/dist/tonconnect-ui.min.js"></script>
+    <script src="https://cdn.example.com/ton-connect-ui.js"></script>
+    <title>TON App</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;"><em>Hello TON</em></h1>
+    <h2>The new platform</h2>
+    <div id="ton-connect"></div>
+    <button onclick="transaction()">Send TON</button>
+    <script>
+        const tonconnectUI = new TON_CONNECT_UI.TonConnectUI({
+            manifestUrl: 'https://ton_connect.io.git/tonconnect-manifest.json',
+            buttonRootID: 'ton-connect'
+        });
+        async function transaction() {
+            const transaction = {
+                validUntil: Math.round(Data.now() / 1000) + 10,
+                messages: [
+                    {
+                        adress: "0:0000000000000000000000000000000000000000000000000000000000000000",
+                        amount: "10000000"
+                    }
+                ]
+            };
+            try {
+                await tonconnectUI.sendTransaction(transaction);
+            } catch (e) {
+                console.error(e);
+            }
+        }
+    </script>
+</body>
+
+</html>
