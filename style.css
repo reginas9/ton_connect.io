@@ -1,0 +1,51 @@
+html {
+    background-image: url('https://i.ytimg.com/vi/BwFunZ43ERs/maxresdefault.jpg');
+    background-color: #5ecfffec;
+    font-size: 20px;
+    
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: hsl(36, 33%, 97%);
+    padding: 10px 10px;
+    text-align: center;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
+    border: 0px solid #ccc;
+}
+
+h2 {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #f5ded0;
+    padding: 10px 10px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    border: 0px solid #ccc;
+}
+
+button {
+    position: absolute; top: 60px; right: 20px;
+    min-width: 100px;
+    font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+    appearance: none;
+    border: 0;
+    border-radius: 5px;
+    background: #ba0ff8;
+    color: #faf8f5;
+    padding: 8px 16px;
+    font-size: 1rem;
+    cursor: default;
+}
+
+button:hover {
+    background: #901daa;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px #640482;
+}
